@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+
+<!-- 
+
+Author: Pekka Helenius (~Fincer), 2018
+
+-->
+
+<html>
+<head>
+<!-- Define character set -->
+<meta charset="UTF-8">
+
+<!-- Define website title element for browser -->
+<title>Work task management</title>
+
+</head>
+<body onload="clearMessages()"> <!-- Basically update all input fields on page loading state -->
+	<h3>Work task management</h3>
+
+    <label>Task:</label>
+    <input type="text" id="job_title" size="15" onblur="processJobTitle()"> Title <!-- onblur replaces onfocusout Event here -->
+    <br><br>
+
+    <label>Date:</label>
+    <input type="text" id="job_day" size="15" value="" maxlength="10"> (dd.mm.yyyy)
+    <br><br>
+
+    <label>Start time:</label>
+    <input type="text" id="clock_start" size="15" value="00:00" maxlength="5"> (hh:mm)
+    <br><br>
+
+    <label>End time:</label>
+    <input type="text" id="clock_end" size="15" value="00:00" maxlength="5"> (hh:mm)
+    <br><br>
+
+    <label>Description:</label>
+    <textarea id="description" rows="4" cols="40"></textarea>
+    <br><br>
+
+    <input type="button" id="save" value="Save" onclick="writeoutputMessage()">
+    <input type="button" value="Clear all" onclick="clearMessages()">
+    <br><br>
+    
+	<!-- Reserve space for output element, written by javascript funtion below -->
+	<div id="output"></div>
+
+<script type="text/javascript" src="sampleindex_functions.js"></script>
+
+</body>
+</html>
