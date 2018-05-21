@@ -1,5 +1,5 @@
 # Salt testrun
-## Minimal run of Salt Master/Minion configuration for a single Linux computer
+## Minimal Salt Master/Minion configuration for a single Linux computer
 
 ----------------------
 
